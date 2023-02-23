@@ -16,6 +16,9 @@ public class MemeController {
 
     @Autowired
     private MemeRepository memeRepository;
+
+    @Autowired
+    private MemeAppClient memeAppClient;
     
     /** 
      * Gets Random Meme from our SQL database.
@@ -34,9 +37,8 @@ public class MemeController {
     }
 
     @GetMapping("/internet")
-    public Meme getMemeFromInternet() {
-        Meme m = null;
-        return m;
+    public Joke getMemeFromInternet() throws Exception {
+        return memeAppClient.getJokeFromInternet();
     }
 
 }
