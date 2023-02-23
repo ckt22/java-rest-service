@@ -9,6 +9,11 @@ Dependencies used:
 Roadmap:
 - Spring Security
 
+## APIS
+
+GET - /memes/original - Gets memes from MySQL database
+GET - /memes/internet - Gets memes from the Internet.
+
 
 ## Run server locally
 ```bash
